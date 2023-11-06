@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at rand.v(11): always construct contains both blocking and non-blocking assignments File: D:/shudianshiyan/boom_pro/rand.v Line: 11
+Warning (10268): Verilog HDL information at music.v(71): always construct contains both blocking and non-blocking assignments File: D:/shudianshiyan/boom_pro/music.v Line: 71

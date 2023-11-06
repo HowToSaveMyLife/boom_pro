@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sun Mar 19 11:47:59 2023
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : boom_pro
+Top-level Entity Name : boom_pro
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 1,085 / 1,270 ( 85 % )
+Total pins : 59 / 116 ( 51 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

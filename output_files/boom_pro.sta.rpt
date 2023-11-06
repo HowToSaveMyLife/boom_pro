@@ -1,0 +1,581 @@
+Timing Analyzer report for boom_pro
+Sun Mar 19 11:48:05 2023
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk'
+ 12. Hold: 'clk'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; boom_pro                                            ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM1270T144C5                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Fmax Summary                                    ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 26.91 MHz ; 26.91 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Setup Summary                   ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clk   ; -36.156 ; -3685.267     ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.458 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                    ;
++---------+----------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node            ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+----------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -36.156 ; music:music1|cnt0[4] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.823     ;
+; -36.156 ; music:music1|cnt0[4] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.823     ;
+; -36.156 ; music:music1|cnt0[4] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.823     ;
+; -36.156 ; music:music1|cnt0[4] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.823     ;
+; -36.156 ; music:music1|cnt0[4] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.823     ;
+; -36.156 ; music:music1|cnt0[4] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.823     ;
+; -35.802 ; music:music1|cnt0[1] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.469     ;
+; -35.802 ; music:music1|cnt0[1] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.469     ;
+; -35.802 ; music:music1|cnt0[1] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.469     ;
+; -35.802 ; music:music1|cnt0[1] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.469     ;
+; -35.802 ; music:music1|cnt0[1] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.469     ;
+; -35.802 ; music:music1|cnt0[1] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.469     ;
+; -35.793 ; music:music1|cnt0[2] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.460     ;
+; -35.793 ; music:music1|cnt0[2] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.460     ;
+; -35.793 ; music:music1|cnt0[2] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.460     ;
+; -35.793 ; music:music1|cnt0[2] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.460     ;
+; -35.793 ; music:music1|cnt0[2] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.460     ;
+; -35.793 ; music:music1|cnt0[2] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.460     ;
+; -35.642 ; music:music1|cnt0[4] ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.309     ;
+; -35.642 ; music:music1|cnt0[4] ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.309     ;
+; -35.642 ; music:music1|cnt0[4] ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.309     ;
+; -35.642 ; music:music1|cnt0[4] ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.309     ;
+; -35.642 ; music:music1|cnt0[4] ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.309     ;
+; -35.642 ; music:music1|cnt0[4] ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.309     ;
+; -35.510 ; music:music1|cnt0[0] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.177     ;
+; -35.510 ; music:music1|cnt0[0] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.177     ;
+; -35.510 ; music:music1|cnt0[0] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.177     ;
+; -35.510 ; music:music1|cnt0[0] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.177     ;
+; -35.510 ; music:music1|cnt0[0] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.177     ;
+; -35.510 ; music:music1|cnt0[0] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.177     ;
+; -35.431 ; music:music1|cnt0[3] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.098     ;
+; -35.431 ; music:music1|cnt0[3] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.098     ;
+; -35.431 ; music:music1|cnt0[3] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.098     ;
+; -35.431 ; music:music1|cnt0[3] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 36.098     ;
+; -35.431 ; music:music1|cnt0[3] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.098     ;
+; -35.431 ; music:music1|cnt0[3] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 36.098     ;
+; -35.288 ; music:music1|cnt0[1] ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.955     ;
+; -35.288 ; music:music1|cnt0[1] ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.955     ;
+; -35.288 ; music:music1|cnt0[1] ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.955     ;
+; -35.288 ; music:music1|cnt0[1] ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.955     ;
+; -35.288 ; music:music1|cnt0[1] ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.955     ;
+; -35.288 ; music:music1|cnt0[1] ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.955     ;
+; -35.279 ; music:music1|cnt0[2] ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.946     ;
+; -35.279 ; music:music1|cnt0[2] ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.946     ;
+; -35.279 ; music:music1|cnt0[2] ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.946     ;
+; -35.279 ; music:music1|cnt0[2] ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.946     ;
+; -35.279 ; music:music1|cnt0[2] ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.946     ;
+; -35.279 ; music:music1|cnt0[2] ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.946     ;
+; -34.996 ; music:music1|cnt0[0] ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.663     ;
+; -34.996 ; music:music1|cnt0[0] ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.663     ;
+; -34.996 ; music:music1|cnt0[0] ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.663     ;
+; -34.996 ; music:music1|cnt0[0] ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.663     ;
+; -34.996 ; music:music1|cnt0[0] ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.663     ;
+; -34.996 ; music:music1|cnt0[0] ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.663     ;
+; -34.917 ; music:music1|cnt0[3] ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.584     ;
+; -34.917 ; music:music1|cnt0[3] ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.584     ;
+; -34.917 ; music:music1|cnt0[3] ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.584     ;
+; -34.917 ; music:music1|cnt0[3] ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.584     ;
+; -34.917 ; music:music1|cnt0[3] ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.584     ;
+; -34.917 ; music:music1|cnt0[3] ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.584     ;
+; -34.882 ; music:music1|cnt0[5] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.549     ;
+; -34.882 ; music:music1|cnt0[5] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.549     ;
+; -34.882 ; music:music1|cnt0[5] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.549     ;
+; -34.882 ; music:music1|cnt0[5] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.549     ;
+; -34.882 ; music:music1|cnt0[5] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 35.549     ;
+; -34.882 ; music:music1|cnt0[5] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 35.549     ;
+; -34.687 ; music:music1|per[7]  ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.354     ;
+; -34.687 ; music:music1|per[7]  ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.354     ;
+; -34.687 ; music:music1|per[7]  ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.354     ;
+; -34.687 ; music:music1|per[7]  ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.354     ;
+; -34.687 ; music:music1|per[7]  ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 35.354     ;
+; -34.687 ; music:music1|per[7]  ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 35.354     ;
+; -34.560 ; music:music1|cnt0[4] ; music:music1|buzzer      ; clk          ; clk         ; 1.000        ; 0.000      ; 35.227     ;
+; -34.546 ; music:music1|per[1]  ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.213     ;
+; -34.546 ; music:music1|per[1]  ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.213     ;
+; -34.546 ; music:music1|per[1]  ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.213     ;
+; -34.546 ; music:music1|per[1]  ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.213     ;
+; -34.546 ; music:music1|per[1]  ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 35.213     ;
+; -34.546 ; music:music1|per[1]  ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 35.213     ;
+; -34.368 ; music:music1|cnt0[5] ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.035     ;
+; -34.368 ; music:music1|cnt0[5] ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.035     ;
+; -34.368 ; music:music1|cnt0[5] ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.035     ;
+; -34.368 ; music:music1|cnt0[5] ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.035     ;
+; -34.368 ; music:music1|cnt0[5] ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.035     ;
+; -34.368 ; music:music1|cnt0[5] ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 35.035     ;
+; -34.257 ; music:music1|cnt0[6] ; music:music1|one_cnt[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.924     ;
+; -34.257 ; music:music1|cnt0[6] ; music:music1|one_cnt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.924     ;
+; -34.257 ; music:music1|cnt0[6] ; music:music1|one_cnt[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.924     ;
+; -34.257 ; music:music1|cnt0[6] ; music:music1|one_cnt[9]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.924     ;
+; -34.257 ; music:music1|cnt0[6] ; music:music1|one_cnt[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 34.924     ;
+; -34.257 ; music:music1|cnt0[6] ; music:music1|one_cnt[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 34.924     ;
+; -34.206 ; music:music1|cnt0[1] ; music:music1|buzzer      ; clk          ; clk         ; 1.000        ; 0.000      ; 34.873     ;
+; -34.197 ; music:music1|cnt0[2] ; music:music1|buzzer      ; clk          ; clk         ; 1.000        ; 0.000      ; 34.864     ;
+; -34.173 ; music:music1|per[7]  ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.840     ;
+; -34.173 ; music:music1|per[7]  ; music:music1|one_cnt[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.840     ;
+; -34.173 ; music:music1|per[7]  ; music:music1|one_cnt[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.840     ;
+; -34.173 ; music:music1|per[7]  ; music:music1|one_cnt[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.840     ;
+; -34.173 ; music:music1|per[7]  ; music:music1|one_cnt[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.840     ;
+; -34.173 ; music:music1|per[7]  ; music:music1|one_cnt[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.840     ;
+; -34.032 ; music:music1|per[1]  ; music:music1|one_cnt[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 34.699     ;
++---------+----------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                               ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.458 ; music:music1|di                      ; music:music1|di                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.679      ;
+; 1.639 ; disp:disp1|seg_cat[0]                ; disp:disp1|seg_cat[0]                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.860      ;
+; 1.643 ; rand:rand1|out[2]                    ; password[2]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.864      ;
+; 1.650 ; rand:rand1|out[1]                    ; password[1]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
+; 1.650 ; rand:rand1|out[4]                    ; password[4]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.871      ;
+; 1.652 ; rand:rand1|out[5]                    ; password[5]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.873      ;
+; 1.654 ; rand:rand1|out[0]                    ; password[0]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.875      ;
+; 1.654 ; rand:rand1|out[3]                    ; password[3]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.875      ;
+; 1.658 ; music:music1|time_cnt[16]            ; music:music1|time_cnt[16]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.879      ;
+; 1.659 ; countdown:countdown1|second[19]      ; countdown:countdown1|second[19]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.880      ;
+; 1.660 ; cartoon:cartoon1|green_cartoon[2][3] ; cartoon:cartoon1|green_cartoon[2][3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.881      ;
+; 1.664 ; user_defined_cdtime[0]               ; countdown_times[0]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.885      ;
+; 1.678 ; music:music1|buzzer                  ; music:music1|buzzer                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.899      ;
+; 1.721 ; cartoon:cartoon1|cnt[0]              ; cartoon:cartoon1|cnt[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.942      ;
+; 1.767 ; game_state[0]                        ; game_state[0]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.988      ;
+; 1.898 ; success                              ; success                              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.119      ;
+; 1.903 ; rand:rand1|out[6]                    ; password[6]                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.124      ;
+; 1.936 ; cartoon:cartoon1|green_cartoon[3][3] ; cartoon:cartoon1|green_cartoon[3][3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.157      ;
+; 1.950 ; btn6_before                          ; btn6_before                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.171      ;
+; 1.954 ; ps_input_times[0]                    ; ps_input_times[0]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.175      ;
+; 1.958 ; ps_input_times[0]                    ; ps_input_times[1]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.179      ;
+; 1.960 ; cartoon:cartoon1|green_cartoon[1][3] ; cartoon:cartoon1|green_cartoon[1][3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.181      ;
+; 1.972 ; music:music1|music_state[0]          ; music:music1|music_state[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.193      ;
+; 2.037 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.258      ;
+; 2.042 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.263      ;
+; 2.046 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.267      ;
+; 2.049 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[4]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.270      ;
+; 2.058 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.279      ;
+; 2.060 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[7]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.281      ;
+; 2.061 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[6]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.282      ;
+; 2.062 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[1]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.283      ;
+; 2.063 ; cartoon:cartoon1|cnt[2]              ; cartoon:cartoon1|row[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.284      ;
+; 2.107 ; cartoon:cartoon1|times[15]           ; cartoon:cartoon1|times[15]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.116 ; cartoon:cartoon1|times[5]            ; cartoon:cartoon1|times[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; countdown:countdown1|second[0]       ; countdown:countdown1|second[0]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; countdown:countdown1|second[10]      ; countdown:countdown1|second[10]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; cartoon:cartoon1|times[12]           ; cartoon:cartoon1|times[12]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; countdown:countdown1|second[17]      ; countdown:countdown1|second[17]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; countdown:countdown1|second[7]       ; countdown:countdown1|second[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.338      ;
+; 2.125 ; music:music1|time_cnt[8]             ; music:music1|time_cnt[8]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.346      ;
+; 2.126 ; music:music1|one_cnt[5]              ; music:music1|one_cnt[5]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; music:music1|one_cnt[8]              ; music:music1|one_cnt[8]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; music:music1|time_cnt[9]             ; music:music1|time_cnt[9]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; cartoon:cartoon1|times[14]           ; cartoon:cartoon1|times[14]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; cartoon:cartoon1|times[7]            ; cartoon:cartoon1|times[7]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; cartoon:cartoon1|times[6]            ; cartoon:cartoon1|times[6]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; cartoon:cartoon1|times[2]            ; cartoon:cartoon1|times[2]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; countdown:countdown1|second[1]       ; countdown:countdown1|second[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; countdown:countdown1|second[2]       ; countdown:countdown1|second[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; countdown:countdown1|second[11]      ; countdown:countdown1|second[11]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; countdown:countdown1|second[9]       ; countdown:countdown1|second[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; countdown:countdown1|second[12]      ; countdown:countdown1|second[12]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; music:music1|time_cnt[15]            ; music:music1|time_cnt[15]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.127 ; music:music1|time_cnt[5]             ; music:music1|time_cnt[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.348      ;
+; 2.134 ; cartoon:cartoon1|times[16]           ; cartoon:cartoon1|times[16]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.355      ;
+; 2.135 ; music:music1|time_cnt[10]            ; music:music1|time_cnt[10]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.356      ;
+; 2.135 ; music:music1|time_cnt[0]             ; music:music1|time_cnt[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.356      ;
+; 2.136 ; music:music1|cnt0[6]                 ; music:music1|cnt0[6]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.357      ;
+; 2.143 ; music:music1|one_cnt[3]              ; music:music1|one_cnt[3]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.364      ;
+; 2.144 ; music:music1|time_cnt[7]             ; music:music1|time_cnt[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.144 ; music:music1|cnt0[1]                 ; music:music1|cnt0[1]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.365      ;
+; 2.145 ; cartoon:cartoon1|times[17]           ; cartoon:cartoon1|times[17]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.366      ;
+; 2.156 ; music:music1|one_cnt[6]              ; music:music1|one_cnt[6]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.377      ;
+; 2.169 ; music:music1|music_state[1]          ; music:music1|music_state[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.390      ;
+; 2.174 ; ps_input_times[1]                    ; ps_input_times[1]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 2.395      ;
+; 2.175 ; cartoon:cartoon1|times[4]            ; cartoon:cartoon1|times[4]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.396      ;
+; 2.176 ; debounce:debounce2|N[3]              ; debounce:debounce2|N[4]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.397      ;
+; 2.212 ; music:music1|one_cnt[9]              ; music:music1|one_cnt[9]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.433      ;
+; 2.221 ; cartoon:cartoon1|red_cartoon[0][3]   ; cartoon:cartoon1|red_cartoon[0][3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; music:music1|one_cnt[11]             ; music:music1|one_cnt[11]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; cartoon:cartoon1|times[13]           ; cartoon:cartoon1|times[13]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; cartoon:cartoon1|times[8]            ; cartoon:cartoon1|times[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; countdown:countdown1|second[18]      ; countdown:countdown1|second[18]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; countdown:countdown1|second[3]       ; countdown:countdown1|second[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; countdown:countdown1|second[8]       ; countdown:countdown1|second[8]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; countdown:countdown1|second[13]      ; countdown:countdown1|second[13]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.442      ;
+; 2.222 ; music:music1|one_cnt[10]             ; music:music1|one_cnt[10]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.443      ;
+; 2.230 ; disp:disp1|seg_cat[1]                ; disp:disp1|seg_cat[1]                ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; cartoon:cartoon1|times[10]           ; cartoon:cartoon1|times[10]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; countdown:countdown1|second[5]       ; countdown:countdown1|second[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; countdown:countdown1|second[15]      ; countdown:countdown1|second[15]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; music:music1|time_cnt[3]             ; music:music1|time_cnt[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; cartoon:cartoon1|times[11]           ; cartoon:cartoon1|times[11]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; cartoon:cartoon1|times[9]            ; cartoon:cartoon1|times[9]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; countdown:countdown1|second[16]      ; countdown:countdown1|second[16]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; countdown:countdown1|second[6]       ; countdown:countdown1|second[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; countdown:countdown1|second[4]       ; countdown:countdown1|second[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; countdown:countdown1|second[14]      ; countdown:countdown1|second[14]      ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; music:music1|time_cnt[4]             ; music:music1|time_cnt[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; music:music1|time_cnt[2]             ; music:music1|time_cnt[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; music:music1|time_cnt[1]             ; music:music1|time_cnt[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.452      ;
+; 2.232 ; cartoon:cartoon1|times[18]           ; cartoon:cartoon1|times[18]           ; clk          ; clk         ; 0.000        ; 0.000      ; 2.453      ;
+; 2.239 ; music:music1|one_cnt[1]              ; music:music1|one_cnt[1]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.460      ;
+; 2.239 ; music:music1|time_cnt[14]            ; music:music1|time_cnt[14]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.460      ;
+; 2.239 ; music:music1|time_cnt[13]            ; music:music1|time_cnt[13]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.460      ;
+; 2.240 ; music:music1|one_cnt[2]              ; music:music1|one_cnt[2]              ; clk          ; clk         ; 0.000        ; 0.000      ; 2.461      ;
+; 2.241 ; music:music1|time_cnt[11]            ; music:music1|time_cnt[11]            ; clk          ; clk         ; 0.000        ; 0.000      ; 2.462      ;
+; 2.241 ; music:music1|time_cnt[6]             ; music:music1|time_cnt[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.462      ;
+; 2.247 ; password[0]                          ; led[0]~reg0                          ; clk          ; clk         ; 0.000        ; 0.000      ; 2.468      ;
+; 2.249 ; music:music1|cnt0[4]                 ; music:music1|cnt0[4]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 2.470      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+----------+-----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+-----------+----------+----------+----------+
+; clk        ; clk      ; 380744186 ; 0        ; 0        ; 0        ;
++------------+----------+-----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+----------+-----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+-----------+----------+----------+----------+
+; clk        ; clk      ; 380744186 ; 0        ; 0        ; 0        ;
++------------+----------+-----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 251   ; 251  ;
+; Unconstrained Output Ports      ; 35    ; 35   ;
+; Unconstrained Output Port Paths ; 165   ; 165  ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                          ;
++-------------+--------------------------------------------------------------------------------------+
+; Input Port  ; Comment                                                                              ;
++-------------+--------------------------------------------------------------------------------------+
+; btn6        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw7         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; buzzer      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[4]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg_cat[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg_cat[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                          ;
++-------------+--------------------------------------------------------------------------------------+
+; Input Port  ; Comment                                                                              ;
++-------------+--------------------------------------------------------------------------------------+
+; btn6        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw7         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw_input[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; buzzer      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green[4]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; row[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg_cat[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; seg_cat[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Sun Mar 19 11:48:03 2023
+Info: Command: quartus_sta boom_pro -c boom_pro
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'boom_pro.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -36.156
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -36.156           -3685.267 clk 
+Info (332146): Worst-case hold slack is 1.458
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.458               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Sun Mar 19 11:48:05 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

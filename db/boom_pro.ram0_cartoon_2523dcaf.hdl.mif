@@ -1,0 +1,19 @@
+-- begin_signature
+-- cartoon
+-- end_signature
+WIDTH=8;
+DEPTH=8;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	7 :	01111111;
+	6 :	10111111;
+	5 :	11011111;
+	4 :	11101111;
+	3 :	11110111;
+	2 :	11111011;
+	1 :	11111101;
+	0 :	11111110;
+END;

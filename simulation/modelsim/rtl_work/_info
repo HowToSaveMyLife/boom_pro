@@ -1,0 +1,207 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/shudianshiyan/boom_pro/simulation/modelsim
+T_opt
+!s110 1679204398
+VgoS3gkGoJc@U8M8^kl`JJ3
+04 13 4 work boom_pro_tb_3 fast 0
+=1-6018953a14f4-6416a02e-156-5808
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vboom_pro
+Z1 !s110 1679204397
+!i10b 1
+!s100 l=jR3T=U8k]OKL5Xm3FNF3
+Id;;:7<G;OLM=ETicDazG31
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1679194654
+8D:/shudianshiyan/boom_pro/boom_pro.v
+FD:/shudianshiyan/boom_pro/boom_pro.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1679204397.258000
+!s107 D:/shudianshiyan/boom_pro/boom_pro.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/boom_pro.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+D:/shudianshiyan/boom_pro -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vboom_pro_tb_3
+R1
+!i10b 1
+!s100 ofc[lb3P?0B14O<Cz0>P93
+I8H]o8L:_H9NgTU9JJ3C2K1
+R2
+R0
+w1679189066
+8D:/shudianshiyan/boom_pro/boom_pro_tb_3.v
+FD:/shudianshiyan/boom_pro/boom_pro_tb_3.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1679204397.746000
+!s107 D:/shudianshiyan/boom_pro/boom_pro_tb_3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/boom_pro_tb_3.v|
+!i113 0
+R4
+R5
+vcartoon
+R1
+!i10b 1
+!s100 L6ZPYCC6aBf2FVV^38jaZ1
+IeAY8z:BD[TAd3daD2V1TN1
+R2
+R0
+w1679150591
+8D:/shudianshiyan/boom_pro/cartoon.v
+FD:/shudianshiyan/boom_pro/cartoon.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.323000
+!s107 D:/shudianshiyan/boom_pro/cartoon.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/cartoon.v|
+!i113 0
+R4
+R5
+vcountdown
+R1
+!i10b 1
+!s100 T:Yc2W2d[2D7UY;^gTYSz3
+Ib^:gBmR2YIZ>@EZ5iXTGa0
+R2
+R0
+w1678983178
+8D:/shudianshiyan/boom_pro/countdown.v
+FD:/shudianshiyan/boom_pro/countdown.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.686000
+!s107 D:/shudianshiyan/boom_pro/countdown.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/countdown.v|
+!i113 0
+R4
+R5
+vdebounce
+R1
+!i10b 1
+!s100 U3Qn>K_a^MTP]_FWlKjKM1
+I;=[h3Rcon4A;D?m_9zGjE2
+R2
+R0
+w1679195082
+8D:/shudianshiyan/boom_pro/debounce.v
+FD:/shudianshiyan/boom_pro/debounce.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.628000
+!s107 D:/shudianshiyan/boom_pro/debounce.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/debounce.v|
+!i113 0
+R4
+R5
+vdisp
+R1
+!i10b 1
+!s100 ?RzlhV8dFaZA2Q`DRGjVW2
+I^OfbAC>7>3knK_n5_M[W<2
+R2
+R0
+w1679188454
+8D:/shudianshiyan/boom_pro/disp.v
+FD:/shudianshiyan/boom_pro/disp.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.384000
+!s107 D:/shudianshiyan/boom_pro/disp.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/disp.v|
+!i113 0
+R4
+R5
+vmusic
+R1
+!i10b 1
+!s100 V_Dn88J[`eIWXNPn`6bDD3
+I:DGI0=bhThiGXBcdNlJ5h0
+R2
+R0
+w1679159849
+8D:/shudianshiyan/boom_pro/music.v
+FD:/shudianshiyan/boom_pro/music.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.567000
+!s107 D:/shudianshiyan/boom_pro/music.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/music.v|
+!i113 0
+R4
+R5
+vrand
+R1
+!i10b 1
+!s100 @EdcJd;7?DaZMKA>kj[D>2
+IRZ2f5`e^nI;gPan^lRgm62
+R2
+R0
+w1679143336
+8D:/shudianshiyan/boom_pro/rand.v
+FD:/shudianshiyan/boom_pro/rand.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.502000
+!s107 D:/shudianshiyan/boom_pro/rand.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/rand.v|
+!i113 0
+R4
+R5
+vsegment
+R1
+!i10b 1
+!s100 IBRi7i4^[@_3j7i5ogY`B1
+I^Ua`bh=NIRO`FFK2dcN931
+R2
+R0
+w1678983202
+8D:/shudianshiyan/boom_pro/segment.v
+FD:/shudianshiyan/boom_pro/segment.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1679204397.442000
+!s107 D:/shudianshiyan/boom_pro/segment.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/shudianshiyan/boom_pro|D:/shudianshiyan/boom_pro/segment.v|
+!i113 0
+R4
+R5

@@ -13,6 +13,7 @@ module cartoon (sw7,game_state,clk,green,red,row,leave_times,success);
     reg [20:0] times;               //结束动画的计时器
 
     //启动时初始化
+    //test for vscode push github
     initial begin
         times<=0;
         cnt<=0;

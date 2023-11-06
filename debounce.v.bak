@@ -1,0 +1,18 @@
+module debounce(btn,clk,rst,btn_pulse);
+    parameter times=5000;		//设置按键消抖的时间
+    input btn,clk,rst;		//时钟、按键、复位键的输入
+    output btn_pulse;			//消抖后的按键输出
+    reg [12:0] N;				  //寄存器对按键信号持续时间进行计数
+
+    always@(posedge clk) begin
+        if(btn&&N<=times)		//按下按键且按键持续时间小于设定值，寄存器加一
+            N<=N+1;
+        else if(btn&&N==times)		//按下按键但按键持续时间已到达设定值，寄存器保持最大值不变
+            N<=N;
+        else								//当无信号输入，持续时间置0
+            N<=0;
+    end
+
+    assign btn_pulse=(N==times)?1:0;		//当按键持续时间已到达设定值，将按键信号输出
+
+endmodule
